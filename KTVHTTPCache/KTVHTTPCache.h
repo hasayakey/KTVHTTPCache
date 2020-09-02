@@ -173,6 +173,10 @@ FOUNDATION_EXPORT const unsigned char KTVHTTPCacheVersionString[];
  */
 + (void)encodeSetURLConverter:(NSURL * (^)(NSURL *URL))URLConverter;
 
+/// Set URL to File name Converter.
+/// @param nameConverter input a URL absoluteString, you should return a string after your custom process.
++ (void)encodeSetURLToFileNameConverter:(NSString * (^)(NSString *URLAbsoluteString))nameConverter;
+
 /**
  *  Download
  *

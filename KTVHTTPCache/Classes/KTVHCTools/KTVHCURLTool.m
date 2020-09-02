@@ -29,6 +29,9 @@
             URL = newURL;
         }
     }
+    if (self.URLToFileNameConverter) {
+        return self.URLToFileNameConverter(URL.absoluteString);
+    }
     return [self md5:URL.absoluteString];
 }
 

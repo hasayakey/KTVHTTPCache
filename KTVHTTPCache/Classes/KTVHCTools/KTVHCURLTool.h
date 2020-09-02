@@ -16,6 +16,7 @@
 + (instancetype)tool;
 
 @property (nonatomic, copy) NSURL * (^URLConverter)(NSURL *URL);
+@property (nonatomic, copy) NSString * (^URLToFileNameConverter)(NSString *URLAbsoluteString);
 
 - (NSString *)keyWithURL:(NSURL *)URL;
 

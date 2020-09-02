@@ -96,6 +96,11 @@
     [KTVHCURLTool tool].URLConverter = URLConverter;
 }
 
++ (void)encodeSetURLToFileNameConverter:(NSString * (^)(NSString *URLAbsoluteString))nameConverter
+{
+    [KTVHCURLTool tool].URLToFileNameConverter = nameConverter;
+}
+
 #pragma mark - Download
 
 + (void)downloadSetTimeoutInterval:(NSTimeInterval)timeoutInterval

@@ -13,6 +13,9 @@
 + (NSString *)logPath;
 + (NSString *)archivePath;
 + (NSString *)directoryPathWithURL:(NSURL *)URL;
+
+/// 文件的完整路径：不再存放在和URL相关的一个文件夹里，直接存放在根路径下（KTVHTTPCache路径下）
+/// @param URL 资源地址
 + (NSString *)completeFilePathWithURL:(NSURL *)URL;
 + (NSString *)filePathWithURL:(NSURL *)URL offset:(long long)offset;
 + (NSString *)converToRelativePath:(NSString *)path;

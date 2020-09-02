@@ -41,8 +41,7 @@
 + (NSString *)completeFilePathWithURL:(NSURL *)URL
 {
     NSString *fileName = [[[KTVHCURLTool tool] keyWithURL:URL] stringByAppendingPathExtension:URL.pathExtension];
-    NSString *directoryPath = [self directoryPathWithURL:URL];
-    NSString *filePath = [directoryPath stringByAppendingPathComponent:fileName];
+    NSString *filePath = [[self rootDirectory] stringByAppendingPathComponent:fileName];
     return [self converToAbsoultePath:filePath];
 }
 
@@ -61,7 +60,7 @@
         }
         number++;
     }
-    return [self converToAbsoultePath:filePath];;
+    return [self converToAbsoultePath:filePath];
 }
 
 + (NSString *)basePath
